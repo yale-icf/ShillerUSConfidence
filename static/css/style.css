@@ -148,7 +148,7 @@ body {
 }
 
 .index-selector {
-    margin: 2rem 0;
+    margin: 1.5rem 0 1rem 0;
     max-width: 600px;
 }
 
@@ -163,35 +163,40 @@ body {
 
 .plot-title {
     color: var(--yale-blue);
-    margin: 1.5rem 0;
+    margin: 1rem 0 0.5rem 0;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
 .plot-container {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     min-height: 600px;
 }
 
 .chart-controls {
-    margin: 1rem 0;
+    margin: 0.5rem 0 1rem 0;
     text-align: center;
 }
 
 .chart-controls .btn {
-    background-color: var(--yale-blue);
-    border-color: var(--yale-blue);
-    color: white;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
 }
 
 .chart-controls .btn:hover {
-    background-color: #002a56;
-    border-color: #002a56;
-    transform: translateY(-1px);
+    background-color: #6c757d;
     color: white;
+}
+
+.chart-controls .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
 }
 
 .calculation-section {

@@ -36,7 +36,7 @@ function switchIndex(indexId) {
 function toggleRollingAverage() {
     showRollingAverage = !showRollingAverage;
     const button = document.getElementById('rolling-avg-toggle');
-    button.textContent = showRollingAverage ? 'Hide 6 Month Rolling Avg' : 'Show 6 Month Rolling Avg';
+    button.textContent = showRollingAverage ? 'Show Raw Monthly' : 'Show 6 Month Rolling Avg';
     
     // Re-render the plot with current data
     if (currentPlotData) {
@@ -182,41 +182,14 @@ function renderPlot(data) {
     // 8) Build Plotly traces
     const traces = [];
     
-    // Always show the main traces
-    const traceInstitutional = {
-      x: xDates,
-      y: yInst,
-      type: 'scatter',
-      mode: 'lines',
-      name: 'Institutional',
-      line: {
-        color: '#00356B',
-        width: 2
-      }
-    };
-  
-    const traceIndividual = {
-      x: xDates,
-      y: yInd,
-      type: 'scatter',
-      mode: 'lines',
-      name: 'Individual',
-      line: {
-        color: '#FF6B6B',
-        width: 2
-      }
-    };
-
-    traces.push(traceInstitutional, traceIndividual);
-
-    // Add rolling average traces if toggle is on
     if (showRollingAverage) {
+      // Show only rolling average traces
       const traceInstitutionalRolling = {
         x: xDates,
         y: yInstRolling,
         type: 'scatter',
         mode: 'lines',
-        name: 'Institutional (6M Avg)',
+        name: 'Institutional',
         line: {
           color: '#00356B',
           width: 2,
@@ -229,7 +202,7 @@ function renderPlot(data) {
         y: yIndRolling,
         type: 'scatter',
         mode: 'lines',
-        name: 'Individual (6M Avg)',
+        name: 'Individual',
         line: {
           color: '#FF6B6B',
           width: 2,
@@ -238,6 +211,33 @@ function renderPlot(data) {
       };
 
       traces.push(traceInstitutionalRolling, traceIndividualRolling);
+    } else {
+      // Show only raw monthly traces
+      const traceInstitutional = {
+        x: xDates,
+        y: yInst,
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Institutional',
+        line: {
+          color: '#00356B',
+          width: 2
+        }
+      };
+    
+      const traceIndividual = {
+        x: xDates,
+        y: yInd,
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Individual',
+        line: {
+          color: '#FF6B6B',
+          width: 2
+        }
+      };
+
+      traces.push(traceInstitutional, traceIndividual);
     }
   
     // 9) Layout and config
