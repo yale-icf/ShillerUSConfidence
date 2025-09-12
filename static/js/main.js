@@ -255,7 +255,7 @@ function renderPlot(data) {
           bordercolor: '#cccccc'
         },
         type: 'date',
-        range: ['2001-01-01', new Date().toISOString().split('T')[0]],  // Use current date as end date
+        range: ['2020-01-01', new Date().toISOString().split('T')[0]],  // Start from Jan 2020
         showspikes: false
       },
       yaxis: {
