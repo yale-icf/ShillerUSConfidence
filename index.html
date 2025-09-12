@@ -79,7 +79,12 @@
                 </select>
             </div>
 
-            <h2 id="plot-title" class="plot-title"></h2>
+            <div class="plot-header">
+                <h2 id="plot-title" class="plot-title"></h2>
+                <button id="rolling-avg-toggle" class="btn btn-sm btn-outline-secondary" onclick="toggleRollingAverage()">
+                    Show 6 Month Rolling Avg
+                </button>
+            </div>
             <div id="plot-container" class="plot-container"></div>
 
             <div class="calculation-section">

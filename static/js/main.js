@@ -1,3 +1,7 @@
+// Global variable to track rolling average visibility
+let showRollingAverage = false;
+let currentPlotData = null; // Store current plot data for toggling
+
 // Initialize collapsible sections and calculation content
 document.addEventListener('DOMContentLoaded', function() {
     const collapsibles = document.querySelectorAll('.collapsible-header');
@@ -26,6 +30,18 @@ function switchIndex(indexId) {
     document.getElementById('plot-title').textContent = titles[indexId];
     loadPlotData(indexId);
     updateCalculationContent(indexId);
+}
+
+// Toggle rolling average visibility
+function toggleRollingAverage() {
+    showRollingAverage = !showRollingAverage;
+    const button = document.getElementById('rolling-avg-toggle');
+    button.textContent = showRollingAverage ? 'Hide 6 Month Rolling Avg' : 'Show 6 Month Rolling Avg';
+    
+    // Re-render the plot with current data
+    if (currentPlotData) {
+        renderPlot(currentPlotData);
+    }
 }
 
 // Update calculation content based on selected index
@@ -144,8 +160,29 @@ async function loadPlotData(plotType) {
 
     const yInstRolling = calculateRollingAverage(yInst, 6);
     const yIndRolling = calculateRollingAverage(yInd, 6);
+
+    // Store the plot data for toggling
+    currentPlotData = {
+      xDates,
+      yInst,
+      yInd,
+      yInstRolling,
+      yIndRolling,
+      plotType
+    };
+
+    // Render the plot
+    renderPlot(currentPlotData);
+}
+
+// Render the plot with current data and rolling average toggle
+function renderPlot(data) {
+    const { xDates, yInst, yInd, yInstRolling, yIndRolling } = data;
   
     // 8) Build Plotly traces
+    const traces = [];
+    
+    // Always show the main traces
     const traceInstitutional = {
       x: xDates,
       y: yInst,
@@ -170,34 +207,40 @@ async function loadPlotData(plotType) {
       }
     };
 
-    // Add rolling average traces with dashed lines
-    const traceInstitutionalRolling = {
-      x: xDates,
-      y: yInstRolling,
-      type: 'scatter',
-      mode: 'lines',
-      name: 'Institutional (6M Avg)',
-      line: {
-        color: '#00356B',
-        width: 2,
-        dash: 'dash'
-      }
-    };
+    traces.push(traceInstitutional, traceIndividual);
+
+    // Add rolling average traces if toggle is on
+    if (showRollingAverage) {
+      const traceInstitutionalRolling = {
+        x: xDates,
+        y: yInstRolling,
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Institutional (6M Avg)',
+        line: {
+          color: '#00356B',
+          width: 2,
+          dash: 'dash'
+        }
+      };
+    
+      const traceIndividualRolling = {
+        x: xDates,
+        y: yIndRolling,
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Individual (6M Avg)',
+        line: {
+          color: '#FF6B6B',
+          width: 2,
+          dash: 'dash'
+        }
+      };
+
+      traces.push(traceInstitutionalRolling, traceIndividualRolling);
+    }
   
-    const traceIndividualRolling = {
-      x: xDates,
-      y: yIndRolling,
-      type: 'scatter',
-      mode: 'lines',
-      name: 'Individual (6M Avg)',
-      line: {
-        color: '#FF6B6B',
-        width: 2,
-        dash: 'dash'
-      }
-    };
-  
-    // 9) Layout and config (basically the same as your original)
+    // 9) Layout and config
     const layout = {
       height: 600,
       xaxis: {
@@ -254,14 +297,9 @@ async function loadPlotData(plotType) {
       }
     };
   
-    // 10) Render the figure with all 4 traces
-    Plotly.newPlot('plot-container', [
-      traceInstitutional, 
-      traceIndividual, 
-      traceInstitutionalRolling, 
-      traceIndividualRolling
-    ], layout, config);
-  }
+    // 10) Render the figure
+    Plotly.newPlot('plot-container', traces, layout, config);
+}
 
 
 
