@@ -119,8 +119,33 @@ async function loadPlotData(plotType) {
       yInst.push(isNaN(valInst) ? null : valInst);
       yInd.push(isNaN(valInd) ? null : valInd);
     });
+
+    // 7) Calculate 6-month rolling averages
+    function calculateRollingAverage(data, windowSize = 6) {
+      const rollingAvg = [];
+      for (let i = 0; i < data.length; i++) {
+        if (i < windowSize - 1) {
+          rollingAvg.push(null); // Not enough data points for rolling average
+        } else {
+          let sum = 0;
+          let count = 0;
+          // Look back windowSize months
+          for (let j = i - windowSize + 1; j <= i; j++) {
+            if (data[j] !== null && !isNaN(data[j])) {
+              sum += data[j];
+              count++;
+            }
+          }
+          rollingAvg.push(count > 0 ? sum / count : null);
+        }
+      }
+      return rollingAvg;
+    }
+
+    const yInstRolling = calculateRollingAverage(yInst, 6);
+    const yIndRolling = calculateRollingAverage(yInd, 6);
   
-    // 7) Build Plotly traces (one for Institutional, one for Individual)
+    // 8) Build Plotly traces
     const traceInstitutional = {
       x: xDates,
       y: yInst,
@@ -144,8 +169,35 @@ async function loadPlotData(plotType) {
         width: 2
       }
     };
+
+    // Add rolling average traces with dashed lines
+    const traceInstitutionalRolling = {
+      x: xDates,
+      y: yInstRolling,
+      type: 'scatter',
+      mode: 'lines',
+      name: 'Institutional (6M Avg)',
+      line: {
+        color: '#00356B',
+        width: 2,
+        dash: 'dash'
+      }
+    };
   
-    // 8) Layout and config (basically the same as your original)
+    const traceIndividualRolling = {
+      x: xDates,
+      y: yIndRolling,
+      type: 'scatter',
+      mode: 'lines',
+      name: 'Individual (6M Avg)',
+      line: {
+        color: '#FF6B6B',
+        width: 2,
+        dash: 'dash'
+      }
+    };
+  
+    // 9) Layout and config (basically the same as your original)
     const layout = {
       height: 600,
       xaxis: {
@@ -202,8 +254,13 @@ async function loadPlotData(plotType) {
       }
     };
   
-    // 9) Render the figure
-    Plotly.newPlot('plot-container', [traceInstitutional, traceIndividual], layout, config);
+    // 10) Render the figure with all 4 traces
+    Plotly.newPlot('plot-container', [
+      traceInstitutional, 
+      traceIndividual, 
+      traceInstitutionalRolling, 
+      traceIndividualRolling
+    ], layout, config);
   }
 
 
