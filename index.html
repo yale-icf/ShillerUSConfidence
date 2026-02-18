@@ -44,7 +44,7 @@
         <div class="container">
             <div class="yale-header">
                 <div class="yale-brand">
-                    <img src="ICF_Logo.png" alt="ICF Logo" class="yale-logo">
+                    <img src="ICF_Logo.png" alt="Yale International Center for Finance Logo" class="yale-logo">
                 </div>
             </div>
         </div>
@@ -85,11 +85,11 @@
         </section>
 
         <section id="download" class="text-center my-5">
-            <button class="download-button" onclick="downloadCSV()">Download Free Index Data</button>
+            <button class="download-button" onclick="downloadCSV()" aria-label="Download free index data as CSV">Download Free Index Data</button>
             
             <div class="button-container">
-                <button class="download-btn-orange" onclick="downloadQuestionnaire()">Download Example Survey</button>
-                <button class="download-btn-orange" onclick="downloadExtendedCSV()">Other Available Indices</button>
+                <button class="download-btn-orange" onclick="downloadQuestionnaire()" aria-label="Download example survey PDF">Download Example Survey</button>
+                <button class="download-btn-orange" onclick="downloadExtendedCSV()" aria-label="Download other available indices">Other Available Indices</button>
             </div>
         </section>
 
@@ -107,7 +107,7 @@
             <div id="plot-container" class="plot-container"></div>
             
             <div class="chart-controls">
-                <button id="rolling-avg-toggle" class="btn btn-sm btn-outline-secondary" onclick="toggleRollingAverage()">
+                <button id="rolling-avg-toggle" class="btn btn-sm btn-outline-secondary" onclick="toggleRollingAverage()" aria-label="Toggle 6 month rolling average on chart">Show 6 Month Rolling Avg</button>
                     Show 6 Month Rolling Avg
                 </button>
             </div>
