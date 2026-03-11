@@ -26,7 +26,12 @@ jobs:
       - name: Generate analysis
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -u scripts/generate_analysis.py
+        run: |
+          echo "Python version: $(python --version)"
+          echo "Working dir: $(pwd)"
+          echo "Script exists: $(ls scripts/generate_analysis.py)"
+          echo "API key set: $([[ -n "$ANTHROPIC_API_KEY" ]] && echo yes || echo NO)"
+          python -u scripts/generate_analysis.py 2>&1
 
       - name: Commit and push if changed
         run: |
