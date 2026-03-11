@@ -5,6 +5,7 @@ import csv
 import json
 import os
 import sys
+import traceback
 from datetime import date, datetime
 
 import anthropic
@@ -171,4 +172,15 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        print("ERROR: ANTHROPIC_API_KEY environment variable is not set.", file=sys.stderr)
+        sys.exit(1)
+    print(f"API key found (length: {len(api_key)})")
+
+    try:
+        main()
+    except Exception:
+        print("\n--- FULL TRACEBACK ---", file=sys.stderr)
+        traceback.print_exc()
+        sys.exit(1)
