@@ -1,0 +1,39 @@
+name: Generate Weekly Analysis
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'   # Every Monday at 9 AM ET (14:00 UTC)
+  workflow_dispatch:        # Also allow manual runs from the Actions tab
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate analysis
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_analysis.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Yale ICF Bot"
+          git config user.email "149617971+yale-icf@users.noreply.github.com"
+          git add static/data/weekly_analysis.json
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "Auto-generate weekly market confidence analysis" &&
+            git push
+          )
