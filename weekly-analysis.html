@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Analysis | Yale ICF Shiller Confidence Indices</title>
+    <meta name="description" content="Weekly market confidence analysis from the Yale International Center for Finance, based on the Shiller U.S. Stock Market Confidence Indices.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .week-badge {
+            background-color: #00356B;
+            color: white;
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .data-badge {
+            background-color: #FF8300;
+            color: white;
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .finding-card {
+            border: 1px solid #e2e6ea;
+            border-radius: 8px;
+            padding: 1.35rem;
+            height: 100%;
+            position: relative;
+        }
+        .finding-card .index-name {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #888;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .finding-card .headline {
+            font-family: 'Merriweather', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #00356B;
+            margin-bottom: 0.8rem;
+            padding-right: 1.8rem;
+        }
+        .values-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .value-chip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f4f6f8;
+            border-radius: 6px;
+            padding: 0.5rem 0.85rem;
+            min-width: 90px;
+        }
+        .value-chip .chip-label {
+            font-size: 0.68rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+        .value-chip .chip-value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #00356B;
+            line-height: 1.2;
+        }
+        .value-chip.orange .chip-value {
+            color: #FF8300;
+        }
+        .direction-indicator {
+            position: absolute;
+            top: 1.1rem;
+            right: 1.1rem;
+            font-size: 1.15rem;
+        }
+        .direction-up { color: #28a745; }
+        .direction-down { color: #dc3545; }
+        .direction-neutral { color: #adb5bd; }
+        .finding-card .interpretation {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .analysis-section {
+            margin-bottom: 2.75rem;
+        }
+        .analysis-section p {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .analysis-section p:last-child {
+            margin-bottom: 0;
+        }
+        .exec-summary-box {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: #333;
+            border-left: 4px solid #00356B;
+            padding: 1.25rem 1.5rem;
+            background: #f8fafc;
+            border-radius: 0 6px 6px 0;
+        }
+        .context-box {
+            background-color: #f0f4f8;
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+        }
+        .context-box p {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: #333;
+            margin: 0;
+        }
+        .methodology-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+        }
+        .methodology-box p {
+            font-size: 0.92rem;
+            line-height: 1.75;
+            color: #444;
+            margin-bottom: 0.85rem;
+        }
+        .methodology-box p:last-child {
+            margin-bottom: 0;
+        }
+        .back-link {
+            color: #00356B;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            color: #00356B;
+        }
+        .disclaimer-box {
+            background-color: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 6px;
+            padding: 0.85rem 1.1rem;
+            font-size: 0.82rem;
+            color: #5d4e00;
+            line-height: 1.55;
+            margin-bottom: 2rem;
+        }
+        .disclaimer-box i {
+            color: #f9a825;
+        }
+        .page-footer {
+            margin: 3rem 0 2.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.8rem;
+            color: #aaa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .page-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="yale-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div class="yale-brand">
+                    <a href="index.html">
+                        <img src="ICF_Logo.png" alt="Yale International Center for Finance Logo" class="yale-logo">
+                    </a>
+                </div>
+                <ul class="navbar-nav" style="flex-direction: row; gap: 1rem;">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Confidence Indices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="weekly-analysis.html" style="color: #FF8300 !important;">Weekly Analysis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4" id="analysis-content">
+        <div class="text-center py-5 text-muted">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            Loading analysis...
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        async function loadAnalysis() {
+            try {
+                const response = await fetch('static/data/weekly_analysis.json');
+                if (!response.ok) throw new Error('Not found');
+                const data = await response.json();
+                renderAnalysis(data);
+            } catch (e) {
+                document.getElementById('analysis-content').innerHTML =
+                    '<div class="alert alert-warning mt-3">Analysis data could not be loaded. Please check that <code>static/data/weekly_analysis.json</code> exists.</div>';
+            }
+        }
+
+        function directionIcon(dir) {
+            if (dir === 'up')      return '<i class="bi bi-arrow-up-circle-fill direction-up direction-indicator"></i>';
+            if (dir === 'down')    return '<i class="bi bi-arrow-down-circle-fill direction-down direction-indicator"></i>';
+            return '<i class="bi bi-dash-circle-fill direction-neutral direction-indicator"></i>';
+        }
+
+        function paragraphs(text) {
+            return text.split('\n\n')
+                .filter(p => p.trim())
+                .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+                .join('');
+        }
+
+        function renderAnalysis(data) {
+            const findingsHTML = data.key_findings.map(f => `
+                <div class="col-md-6 mb-3">
+                    <div class="finding-card">
+                        ${directionIcon(f.direction)}
+                        <div class="index-name">${f.index}</div>
+                        <div class="headline">${f.headline}</div>
+                        <div class="values-row">
+                            <div class="value-chip">
+                                <span class="chip-label">Institutional</span>
+                                <span class="chip-value">${f.institutional_value}%</span>
+                            </div>
+                            <div class="value-chip orange">
+                                <span class="chip-label">Individual</span>
+                                <span class="chip-value">${f.individual_value}%</span>
+                            </div>
+                        </div>
+                        <p class="interpretation">${f.interpretation}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('analysis-content').innerHTML = `
+                <a href="index.html" class="back-link">
+                    <i class="bi bi-arrow-left"></i> Back to Confidence Indices
+                </a>
+
+                <h1 class="main-title" style="margin-top: 1.5rem;">Weekly Market Confidence Analysis</h1>
+
+                <div class="d-flex align-items-center gap-2 mb-4" style="flex-wrap: wrap;">
+                    <span class="week-badge"><i class="bi bi-calendar3 me-1"></i> Week of ${data.week_of}</span>
+                    <span class="data-badge"><i class="bi bi-bar-chart-fill me-1"></i> ${data.data_period} Data</span>
+                </div>
+
+                <div class="disclaimer-box">
+                    <i class="bi bi-info-circle-fill me-2"></i><strong>Disclaimer:</strong> This analysis was generated by artificial intelligence and does not represent the opinions, views, or endorsements of Yale University, the International Center for Finance, or its faculty. The index data is produced by the Yale International Center for Finance. Readers should exercise independent judgment when relying on this material.
+                </div>
+
+                <div class="analysis-section">
+                    <div class="section-subtitle">Executive Summary</div>
+                    <div class="section-divider"></div>
+                    <div class="exec-summary-box mt-3">${data.executive_summary}</div>
+                </div>
+
+                <div class="analysis-section">
+                    <div class="section-subtitle">Key Findings</div>
+                    <div class="section-divider"></div>
+                    <div class="row mt-3">${findingsHTML}</div>
+                </div>
+
+                <div class="analysis-section">
+                    <div class="section-subtitle">Detailed Analysis</div>
+                    <div class="section-divider"></div>
+                    <div class="mt-3">${paragraphs(data.detailed_analysis)}</div>
+                </div>
+
+                <div class="analysis-section">
+                    <div class="section-subtitle">Market News Context</div>
+                    <div class="section-divider"></div>
+                    <div class="context-box mt-3"><p>${data.market_context}</p></div>
+                </div>
+
+                <div class="analysis-section">
+                    <div class="section-subtitle">About the Methodology</div>
+                    <div class="section-divider"></div>
+                    <div class="methodology-box mt-3">${paragraphs(data.methodology)}</div>
+                </div>
+
+                <div class="page-footer">
+                    <span>Published by the Yale International Center for Finance &nbsp;·&nbsp; Shiller U.S. Stock Market Confidence Indices</span>
+                    <a href="index.html" class="back-link">View full data →</a>
+                </div>
+            `;
+        }
+
+        loadAnalysis();
+    </script>
+</body>
+</html>
