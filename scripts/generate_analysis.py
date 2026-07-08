@@ -29,12 +29,6 @@ METHODOLOGY = (
     "experience — are maintained across the panel."
 )
 
-MARKET_CONTEXT_PLACEHOLDER = (
-    "[PLACEHOLDER: Add 2-3 sentences about recent market news relevant to this month's "
-    "readings — e.g. Fed decisions, major earnings, economic data, or geopolitical events.]"
-)
-
-
 def read_latest_rows(csv_path, n=3):
     """Return the last n months of data that have at least one non-empty value."""
     with open(csv_path, newline="", encoding="utf-8") as f:
@@ -93,7 +87,6 @@ def build_prompt(data_block, latest_row):
             ]
         ],
         "detailed_analysis": "<3-4 short paragraphs separated by \\n\\n>",
-        "market_context": MARKET_CONTEXT_PLACEHOLDER,
         "methodology": METHODOLOGY,
     }
 
