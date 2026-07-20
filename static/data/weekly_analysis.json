@@ -1,41 +1,41 @@
 {
-  "week_of": "July 13, 2026",
+  "week_of": "July 20, 2026",
   "data_period": "March 2026",
-  "executive_summary": "March 2026 paints a picture of a market where institutional and individual investors seem to be living in different worlds. Professional money managers are uniformly convinced that any market dip will bounce back fast — every single one surveyed said so — yet only a third of individual investors share that faith. Meanwhile, both groups have grown gloomier about where stocks will be a year from now, and worries about a possible crash have ticked back up among institutions. The overall mood is one of guarded unease, with the two camps disagreeing sharply on how resilient this market really is.",
+  "executive_summary": "March 2026 paints a picture of deepening pessimism among individual investors, while institutional investors show a striking split personality — doubtful about near-term returns but fully convinced that any dip would bounce back fast. Only a third of individual investors expect higher prices over the next year, down sharply from February. Meanwhile, institutional Buy-on-Dips confidence hit a perfect 100%, a reading that stands out against a backdrop of otherwise cautious sentiment. The two groups are telling very different stories about where the market goes from here.",
   "key_findings": [
     {
       "index": "1-Year Outlook",
       "institutional_value": 50.0,
       "individual_value": 33.33,
-      "headline": "Optimism Fades Further",
-      "interpretation": "Only half of institutional investors and a third of individuals expect stock prices to be higher a year from now. Individual confidence dropped sharply from about 58% in February, one of the steepest month-over-month declines in this dataset, which may reflect growing anxiety about the economic outlook or disappointment with recent market performance.",
+      "headline": "Individuals grow notably gloomier",
+      "interpretation": "Individual 1-Year Confidence dropped to 33%, meaning two out of three wealthy individual investors do not expect higher prices a year from now. Institutional investors held steady at 50% — a coin-flip outlook that may reflect genuine uncertainty or a canceling-out of competing bullish and bearish views within the group.",
       "direction": "down"
     },
     {
       "index": "Crash Confidence",
       "institutional_value": 50.0,
       "individual_value": 20.0,
-      "headline": "Crash Fears Split Sharply",
-      "interpretation": "Half of institutional investors feel confident a crash won't happen in the next six months, while only one in five individuals shares that calm. The institutional reading fell from nearly 54% in February, suggesting that even professionals are growing a bit more uneasy, though the individual figure returned to its January level.",
+      "headline": "Crash fears linger unevenly",
+      "interpretation": "Only 20% of individual investors feel confident a crash won't happen in the next six months, unchanged from January and down from February's brief improvement. Institutional crash confidence slipped modestly to 50%, suggesting that roughly half of professional managers see a meaningful crash risk — hardly a reassuring number.",
       "direction": "down"
     },
     {
       "index": "Buy-on-Dips",
       "institutional_value": 100.0,
       "individual_value": 40.0,
-      "headline": "Pros All In, Public Skeptical",
-      "interpretation": "Every institutional respondent in March believes a sharp one-day drop would fully recover within two days — a striking 100% reading. Individual investors moved in the opposite direction, falling from 81% to 40%, one of the widest gaps between the two groups in recent memory.",
+      "headline": "Institutions all-in on rebounds",
+      "interpretation": "Every single institutional respondent believes a 3% daily drop would fully recover within two days — a perfect 100% reading that is unusual and worth watching. Individual investors moved in the opposite direction, falling to 40% from 81%, one of the sharpest month-over-month drops in recent memory.",
       "direction": "down"
     },
     {
       "index": "Valuation Confidence",
       "institutional_value": 50.0,
       "individual_value": 40.0,
-      "headline": "Overvaluation Worries Persist",
-      "interpretation": "Half of institutional investors and 40% of individuals say the market is not overvalued — meaning the majority of everyday investors still think stocks are priced too high. Of course, those who subscribe to market-efficiency theory would argue that the current price, by definition, reflects fair value, making overvaluation a somewhat philosophical question.",
+      "headline": "Overvaluation worries persist",
+      "interpretation": "Six in ten individual investors believe the market is overvalued, though some institutional investors who subscribe to efficient-market thinking would argue that the current price is, by definition, the right price. Institutional valuation confidence rose to 50% from 31%, a notable rebound that could reflect shifting views on earnings growth or simply rotation within the respondent pool.",
       "direction": "up"
     }
   ],
-  "detailed_analysis": "The most eye-catching number in March is that perfect 100% Buy-on-Dips reading among institutional investors. It's as if every professional surveyed believes the market has a safety net — that any sudden fall would snap right back. One reading of this: institutions may see the current environment as fundamentally sound enough that sell-offs are buying opportunities, not warning signs. Another possibility: after years of quick recoveries, it may simply feel unimaginable that a drop wouldn't reverse.\n\nIndividual investors tell a very different story. Their Buy-on-Dips confidence was cut in half, from 81% to 40%, and their one-year outlook fell to just 33% — the lowest of the three months tracked here. This could reflect anything from news-driven anxiety to personal portfolio pain to broader skepticism about the economy. Whatever the cause, everyday investors are clearly less willing to assume that dips are temporary.\n\nCrash worries are worth watching too. The institutional Crash Confidence reading slipped from about 54% to 50%, a modest move, but it reverses the February uptick. Individual crash confidence returned to its January low of 20%, meaning four out of five wealthy individuals think a crash is at least plausible in the next six months. That's a lot of people sleeping with one eye open.\n\nValuation confidence offers a small silver lining, rising modestly for both groups compared to February. Still, when only 40–50% of investors believe the market isn't overpriced, it's hard to call that a ringing endorsement. And it's worth remembering that for investors who believe markets are efficient, the very concept of overvaluation doesn't apply — the price is always right by construction. That philosophical divide alone may explain some of the spread in responses.",
+  "detailed_analysis": "The March data reveals a widening gap between how institutional and individual investors feel about the market's resilience. The most eye-catching number is the 100% institutional Buy-on-Dips reading — every professional manager surveyed expects a quick recovery from any single-day sell-off. That kind of unanimity is rare and could reflect deep faith in market liquidity, or it may hint at complacency. Individual investors, by contrast, slashed their Buy-on-Dips confidence from 81% to 40%, suggesting everyday wealthy investors see a market that might not bounce back so easily.\n\nOn the 12-month outlook, the mood has soured considerably among individuals. Only a third expect prices to rise over the coming year, down from 58% in February and 67% in January. That's a steady, staircase-like decline — the kind of trend that, if it continues, may signal a broader shift in retail sentiment. Institutional investors, meanwhile, have flatlined at 50%, essentially shrugging their shoulders.\n\nCrash anxiety tells a similarly uneven story. Individual investors remain deeply worried: 80% think a crash is at least plausible in the next six months. Institutional managers are more evenly split at 50-50, but that's still a notable drop from February's relatively calmer 54%. One reading of this divergence is that professionals have hedging tools and diversification strategies that make them less emotionally reactive to crash scenarios; another is that their information sources are painting a different picture.\n\nValuation confidence offers a small bright spot for institutional investors, climbing back to 50% after dipping to 31% in February. This could reflect updated earnings expectations, a reassessment of interest-rate paths, or simply month-to-month noise in a relatively small survey. It's worth noting that for investors who believe markets are efficient, the question of overvaluation is somewhat moot — the price is the price. Individual valuation confidence slipped to 40%, continuing a pattern of skepticism that has persisted all year.",
   "methodology": "These indices come from the Yale/Shiller U.S. Stock Market Confidence Surveys, which have tracked investor sentiment since 1989. Each month, roughly 100 wealthy individual investors and 100 institutional investment managers answer the same standardized questions. The consistency of those questions over 35+ years is what makes the data meaningful — you can actually compare investor psychology across very different market environments.\n\nThe four indices each measure something distinct:\n\n• <strong>1-Year Confidence</strong>: The share who expect prices to be higher in 12 months.\n• <strong>Crash Confidence</strong>: The share who believe a crash in the next 6 months is very unlikely (under 10% probability). A low reading means most people think a crash is plausible.\n• <strong>Buy-on-Dips Confidence</strong>: The share who believe that after a 3% single-day market drop, prices would fully recover within two days.\n• <strong>Valuation Confidence</strong>: The share who do not believe the market is overvalued.\n\nSurveys were conducted semi-annually before 2001 and have been monthly since July 2001. Respondents rotate over time, but consistent characteristics — high income, investment experience — are maintained across the panel."
 }
