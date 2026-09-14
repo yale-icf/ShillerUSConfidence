@@ -1,41 +1,41 @@
 {
-  "week_of": "September 7, 2026",
+  "week_of": "September 14, 2026",
   "data_period": "April 2026",
-  "executive_summary": "April brought a sharp mood swing. After a bleak March — when barely a third of either group expected stocks to rise — optimism came roaring back. Eighty percent of institutional investors and 71% of individuals now see higher prices ahead. Crash fears eased somewhat, and professionals regained their faith in quick recoveries after dips. Yet both groups still lean toward viewing the market as overvalued, a tension that sits uneasily alongside the newfound bullishness.",
+  "executive_summary": "After a gloomy March that saw confidence crater across the board, April brought a sharp rebound in optimism — especially on the question of whether stocks will be higher a year from now. Both institutional and individual investors swung dramatically upward on that measure. Crash fears eased somewhat, and institutional faith in buying the dip climbed back near February levels. Valuation concerns remain, though: most respondents in both groups still think the market is expensive. The overall picture is one of renewed short-term hope layered on top of lingering unease about whether prices are justified.",
   "key_findings": [
     {
       "index": "1-Year Outlook",
       "institutional_value": 80.0,
       "individual_value": 70.59,
-      "headline": "Optimism Stages a Comeback",
-      "interpretation": "Both groups swung dramatically from March's lows. Four out of five institutional investors now expect prices to climb over the next year, up from just one in three a month earlier. This could reflect improving economic signals, a policy shift, or simply a snapback after March's deep pessimism overshot reality.",
+      "headline": "Optimism Surges After March Slump",
+      "interpretation": "Four out of five institutional investors and roughly seven in ten individuals now expect stocks to be higher a year from now — a dramatic reversal from March, when only a third of each group felt that way. This could reflect improving economic data, a policy shift, or simply the kind of mood swing that sometimes follows a sharp drop in sentiment.",
       "direction": "up"
     },
     {
       "index": "Crash Confidence",
       "institutional_value": 54.55,
       "individual_value": 47.06,
-      "headline": "Crash Fears Ease Somewhat",
-      "interpretation": "About half of each group now feels fairly safe from a crash in the next six months — a meaningful recovery from March, when only 20% of individuals felt that way. Still, with roughly half of respondents not ruling out a crash, lingering unease hasn't fully cleared.",
+      "headline": "Crash Fears Ease Modestly",
+      "interpretation": "About half of institutional investors and just under half of individuals now feel confident a crash won't happen in the next six months — up meaningfully from March's deeply anxious readings. Still, the fact that roughly half of each group considers a crash plausible suggests the mood is cautious rather than carefree.",
       "direction": "up"
     },
     {
       "index": "Buy-on-Dips",
       "institutional_value": 77.78,
       "individual_value": 52.94,
-      "headline": "Pros Trust Quick Rebounds",
-      "interpretation": "Nearly 78% of institutional investors believe the market would bounce back within two days after a sharp drop, up from 67% in March. Individual investors are more cautious at 53%, which may suggest the pros see deeper market liquidity or faster self-correcting mechanisms than everyday investors do.",
+      "headline": "Institutions Trust The Bounce",
+      "interpretation": "Nearly 78% of institutional investors believe a big one-day drop would recover within two days, up from about 67% in March and close to February's level. Individual investors are more split — only about 53% share that faith, up from 40% but well below their 81% reading in February. One reading of this gap: professionals may see recent volatility as noise, while individuals remember the sting more vividly.",
       "direction": "up"
     },
     {
       "index": "Valuation Confidence",
       "institutional_value": 45.45,
       "individual_value": 43.75,
-      "headline": "Overvaluation Worries Linger",
-      "interpretation": "Fewer than half of either group believe stocks are fairly priced. This is up modestly from March's lows, but the reading still means most respondents see the market as expensive. Of course, investors who subscribe to the view that markets are efficient would argue this question is moot — the current price, by definition, already reflects all available information.",
+      "headline": "Most Still See Overvaluation",
+      "interpretation": "Fewer than half of respondents in either group believe the market is fairly valued or cheap — a slight improvement from March but still a cautious stance. Of course, some institutional investors subscribe to the view that markets are efficient by nature, making the concept of overvaluation essentially moot; for them, this question measures peer sentiment more than personal conviction.",
       "direction": "up"
     }
   ],
-  "detailed_analysis": "April's data reads like a collective exhale after a very tense March. Across all four indices and both investor groups, sentiment improved — in some cases dramatically. The 1-Year Confidence index nearly doubled among individuals and more than doubled among institutions. Whatever spooked the market in March appears to have loosened its grip, though whether the fear was justified or overdone remains an open question.\n\nThe most striking gap between pros and individuals shows up in Buy-on-Dips confidence. Institutional investors are 25 percentage points more likely than individuals to expect a quick recovery after a sharp single-day drop. One reading of this: professional managers, who watch order flow and liquidity conditions daily, may feel the market's plumbing is sturdy enough to absorb shocks. Individual investors, perhaps drawing more on gut feel or headlines, seem less sure.\n\nThe valuation picture creates an interesting paradox. Most respondents in both groups believe the market is overvalued — yet most also expect prices to keep climbing. That's not necessarily contradictory. People can believe stocks are pricey and still think momentum, earnings growth, or a lack of better alternatives will push prices higher. It's a bit like saying a restaurant is overpriced but admitting you'll probably keep eating there.\n\nOne thing worth watching: the speed and size of these sentiment swings. Going from 33% to 80% confidence in a single month (as institutional 1-Year Confidence did) may suggest investors are reacting strongly to short-term catalysts rather than shifting their deeper assumptions. Rapid mood changes in either direction can make markets more volatile, so the coming months will tell us whether April's optimism has staying power or was just a sugar rush.",
+  "detailed_analysis": "April's data tells a comeback story — at least on the surface. Every index moved higher after March's broad-based slump, with the 1-Year Confidence reading staging the most dramatic recovery. Institutional optimism on that measure leapt from 33% to 80%, the kind of whiplash that may suggest the March dip was driven by a specific scare that faded quickly, or perhaps by a small and unusually pessimistic sample that month.\n\nThe institutional-individual gap is worth watching. On Buy-on-Dips, institutions came roaring back to nearly 78%, while individuals climbed only to 53%. Think of it like two passengers after turbulence: the frequent flyer shrugs it off, while the occasional traveler keeps a firm grip on the armrest. This may reflect differences in time horizon, risk tolerance, or simply access to information.\n\nValuation confidence remains the soft spot. Even after a month of improving mood, a majority of both groups still view the market as overvalued. That creates a somewhat unusual combination: most people expect prices to go up, yet most also think prices are already too high. This tension isn't necessarily contradictory — investors can believe stocks are expensive and still expect momentum or earnings growth to push them higher — but it does hint at fragile optimism rather than deep conviction.\n\nOverall, April looks like a relief rally in sentiment. The swing from March was steep enough to raise a natural question: did conditions genuinely change, or were March's readings an outlier? With sample sizes around 100 per group, month-to-month swings can be noisy. The broader three-month arc — solid February, weak March, strong April — may suggest investors are toggling between hope and worry rather than settling into either camp.",
   "methodology": "These indices come from the Yale/Shiller U.S. Stock Market Confidence Surveys, which have tracked investor sentiment since 1989. Each month, roughly 100 wealthy individual investors and 100 institutional investment managers answer the same standardized questions. The consistency of those questions over 35+ years is what makes the data meaningful — you can actually compare investor psychology across very different market environments.\n\nThe four indices each measure something distinct:\n\n• <strong>1-Year Confidence</strong>: The share who expect prices to be higher in 12 months.\n• <strong>Crash Confidence</strong>: The share who believe a crash in the next 6 months is very unlikely (under 10% probability). A low reading means most people think a crash is plausible.\n• <strong>Buy-on-Dips Confidence</strong>: The share who believe that after a 3% single-day market drop, prices would fully recover within two days.\n• <strong>Valuation Confidence</strong>: The share who do not believe the market is overvalued.\n\nSurveys were conducted semi-annually before 2001 and have been monthly since July 2001. Respondents rotate over time, but consistent characteristics — high income, investment experience — are maintained across the panel."
 }
