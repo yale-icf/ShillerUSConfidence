@@ -1,41 +1,41 @@
 {
-  "week_of": "September 28, 2026",
+  "week_of": "October 5, 2026",
   "data_period": "August 2026",
-  "executive_summary": "August painted an unusually split picture. Institutional investors bounced back to high optimism on the one-year outlook and showed striking confidence that any market dip would recover fast. Yet at the same time, crash anxiety actually increased among both groups. In plain terms: people believe stocks will climb, believe dips will heal quickly, but are more nervous than last month that a sharp downturn could still happen. That combination — bullish on the destination, uneasy about the road — is the defining tension this month.",
+  "executive_summary": "August 2026 presents a striking split personality in investor sentiment. Both institutional and individual investors surged in their belief that the market would bounce back quickly from any sell-off — Buy-on-Dips confidence hit 100% among professionals and 87.5% among individuals. At the same time, crash anxiety actually increased, with fewer respondents confident that a crash won't happen. Investors seem to be saying: a sharp drop is plausible, but we'd buy right through it.",
   "key_findings": [
     {
       "index": "1-Year Outlook",
       "institutional_value": 85.71,
       "individual_value": 72.22,
-      "headline": "Institutions Snap Back Sharply",
-      "interpretation": "After dipping to 66.67 in July, institutional confidence in higher prices over the next year surged back to 85.71. Individual confidence eased from 80.0 to 72.22. One reading: institutions may have viewed July's wobble as a temporary reset, while individuals grew slightly more cautious.",
+      "headline": "Pros Bounce Back, Individuals Steady",
+      "interpretation": "Institutional confidence in higher prices a year from now rebounded sharply to 85.71% after dipping to 66.67% in July. Individual confidence edged down to 72.22% from 80%, landing right where it was in June — this could reflect individual investors settling back to a baseline comfort level.",
       "direction": "up"
     },
     {
       "index": "Crash Confidence",
       "institutional_value": 30.0,
       "individual_value": 22.22,
-      "headline": "Crash Worries Quietly Growing",
-      "interpretation": "Only 30% of institutional and 22% of individual investors feel confident a crash won't happen in the next six months — both readings fell from July. This is the lowest institutional reading in the three-month window, suggesting unease about tail risks even as overall optimism holds.",
+      "headline": "Crash Worries Hit New Highs",
+      "interpretation": "Only 30% of institutional investors and 22% of individuals feel confident a crash won't happen in the next six months — both readings dropped from July. In plain terms, most respondents now think a meaningful crash is at least plausible, even if not expected.",
       "direction": "down"
     },
     {
       "index": "Buy-on-Dips",
       "institutional_value": 100.0,
       "individual_value": 87.5,
-      "headline": "Dip-Buying Faith Surges Higher",
-      "interpretation": "Every single institutional respondent believes a 3% drop would recover within two days, up from 45.45 last month. Individual confidence roughly doubled. This may reflect recent experience with quick rebounds, or it could signal that investors are positioned to buy aggressively on weakness.",
+      "headline": "Universal Faith in Quick Recoveries",
+      "interpretation": "Every single institutional respondent in August said they believe a 3% single-day drop would fully recover within two days — up from 45.45% in July. Individual investors followed the same trajectory, jumping from 45.45% to 87.5%. This may suggest deep faith in market liquidity or simply a buy-the-dip reflex hardened by years of fast recoveries.",
       "direction": "up"
     },
     {
       "index": "Valuation Confidence",
       "institutional_value": 66.67,
       "individual_value": 40.0,
-      "headline": "Valuation Views Still Divided",
-      "interpretation": "Two-thirds of institutional investors say the market is not overvalued, up from 60% in July. Individuals held steady at 40%. Some institutional investors who subscribe to market-efficiency thinking may see the current price as inherently correct, making this question less meaningful to them. Either way, the gap between the two groups persists.",
+      "headline": "Valuation Views Diverge Again",
+      "interpretation": "Two-thirds of institutional investors now say the market is not overvalued, up from 60% in July, while individual investors held flat at 40%. Of course, some professionals subscribe to the view that in an efficient market the current price is by definition the right price, which may partially explain the institutional reading.",
       "direction": "up"
     }
   ],
-  "detailed_analysis": "The most eye-catching number in August is the Buy-on-Dips index: 100% of institutional respondents expect a quick recovery after a sharp one-day drop. That's a perfect score and a dramatic jump from July's 45.45. Individual investors tracked in the same direction, climbing to 87.5. Think of it like turbulence on a plane — nearly everyone aboard believes the ride will smooth out fast. Whether that faith is well-placed or simply a product of recent calm markets is impossible to say from survey data alone.\n\nMeanwhile, crash worry moved in the opposite direction. Only 30% of institutions and 22% of individuals feel confident a crash is very unlikely over the next half-year. That's a notable decline from July. So we have an odd pairing: investors are more worried about a large-scale crash yet more convinced that any short-term drop would heal almost immediately. This could reflect a belief that day-to-day dips are mechanical and buyable, while bigger structural risks — geopolitical shocks, policy surprises — remain in the background.\n\nOn valuations, the institutional-individual gap is worth noting. At 66.67, most investment managers don't see the market as overpriced — though it's worth remembering that some in this group view the question itself as moot, since efficient-market thinking holds that stocks are essentially always priced correctly given available information. Individuals, at 40%, are more inclined to think current prices look stretched. Neither view is inherently right; the split may simply reflect different analytical frameworks.\n\nZooming out, August's data suggests a market mood that is optimistic on direction but not entirely comfortable. Investors expect gains, trust that dips will be short-lived, yet acknowledge that something bigger could go wrong. That mix of confidence and caution — like driving fast but keeping one eye on the weather — may be the most honest posture available when uncertainty is genuinely high.",
+  "detailed_analysis": "The most eye-catching finding in August is the paradox between crash worry and dip-buying conviction. Think of it like a homeowner who buys extra fire insurance but also stocks the garage with lumber for renovations — they acknowledge the risk, yet they're ready to build the moment the smoke clears. Whether this reflects genuine analytical confidence or a behavioral habit formed during years of V-shaped recoveries is an open question.\n\nInstitutional investors had a volatile summer. Their 1-Year Confidence fell nearly 20 points in July before snapping all the way back in August. Meanwhile, their Buy-on-Dips reading went from 50% in June to 45% in July to a perfect 100% in August. Swings this large in a relatively small survey panel may partly reflect sampling variation, but they may also signal that professional sentiment is unusually reactive to incoming data right now.\n\nIndividual investors, by contrast, have been more stable on the 1-Year Outlook — hovering in the low 70s in both June and August with a brief pop in July. Their crash anxiety, however, has been consistently higher than the professionals'. Only about one in five wealthy individual investors feels confident a crash is very unlikely. One reading of this gap: individuals may weigh headline risks — geopolitical events, political uncertainty — more heavily than institutional managers who focus on earnings models and positioning.\n\nThe Valuation Confidence numbers deserve a footnote. At 66.67%, institutional investors are more comfortable with current prices than they were all summer. Individual investors remain skeptical at 40%. It's worth remembering that \"overvalued\" means different things to different people. For investors who believe markets are broadly efficient, the question itself is almost beside the point — price is simply where supply meets demand. For others, it's a warning flag. Both perspectives have long intellectual traditions behind them.",
   "methodology": "These indices come from the Yale/Shiller U.S. Stock Market Confidence Surveys, which have tracked investor sentiment since 1989. Each month, roughly 100 wealthy individual investors and 100 institutional investment managers answer the same standardized questions. The consistency of those questions over 35+ years is what makes the data meaningful — you can actually compare investor psychology across very different market environments.\n\nThe four indices each measure something distinct:\n\n• <strong>1-Year Confidence</strong>: The share who expect prices to be higher in 12 months.\n• <strong>Crash Confidence</strong>: The share who believe a crash in the next 6 months is very unlikely (under 10% probability). A low reading means most people think a crash is plausible.\n• <strong>Buy-on-Dips Confidence</strong>: The share who believe that after a 3% single-day market drop, prices would fully recover within two days.\n• <strong>Valuation Confidence</strong>: The share who do not believe the market is overvalued.\n\nSurveys were conducted semi-annually before 2001 and have been monthly since July 2001. Respondents rotate over time, but consistent characteristics — high income, investment experience — are maintained across the panel."
 }
